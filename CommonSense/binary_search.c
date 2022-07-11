@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int	binary_search(int *ordered_array, int search_value)
+int	binary_search(int *ordered_array, int search_value, int len)
 {
 	int	lower_bound;
 	int	upper_bound;
@@ -8,7 +8,7 @@ int	binary_search(int *ordered_array, int search_value)
 	int	value_at_midpoint;
 
 	lower_bound = 0;
-	upper_bound = (sizeof(ordered_array)) / sizeof(ordered_array[0]);
+	upper_bound = len;
 
 	while (lower_bound <= upper_bound)
 	{
@@ -28,8 +28,11 @@ int	main(void)
 {
 	int test[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int search = 6;
+	int	len;
 
-	printf("%d\n", binary_search(test, search));
+	len = sizeof(test) / sizeof(test[0]);
+
+	printf("%d\n", binary_search(test, search, len));
 
 
 }
