@@ -8,7 +8,7 @@ int	binary_search(int *ordered_array, int search_value, int len)
 	int	value_at_midpoint;
 
 	lower_bound = 0;
-	upper_bound = len - 1;
+	upper_bound = len;
 
 	while (lower_bound <= upper_bound)
 	{
@@ -27,7 +27,7 @@ int	binary_search(int *ordered_array, int search_value, int len)
 int	main(void)
 {
 	int test[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int search = 6;
+    int search = 15;
 	int	len;
 
 	len = sizeof(test) / sizeof(test[0]);

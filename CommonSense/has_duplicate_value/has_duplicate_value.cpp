@@ -15,6 +15,7 @@ int	has_duplicate_value(int *array, int len)
 		while (j < len)
 		{
 			steps++;
+			cout << steps << endl;
 			if (i != j && array[i] == array[j])
 				return (1);
 			j++;
