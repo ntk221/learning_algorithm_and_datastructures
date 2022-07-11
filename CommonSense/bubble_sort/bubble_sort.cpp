@@ -1,21 +1,25 @@
 #include <iostream>
+#include <tuple>
 using namespace std;
 
 int	*bubble_sort(int *list, int len)
 {
-	int	unsorted_until_index = len;
+	int	unsorted_until_index = len - 1;
 	int	sorted = 0;
+	int	tmp;
 	int	i;
 
-	i = 0;
 	while (!sorted)
 	{
+		i = 0;
 		sorted = 1;
 		while (i < unsorted_until_index)
 		{
 			if (list[i] > list[i + 1])
 			{
-				list[i], list[i + 1] = list[i + 1], list[i];
+				tmp = list[i];
+				list[i] = list[i + 1];
+				list[i + 1] = tmp;
 				sorted = 0;
 			}
 			i++;

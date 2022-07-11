@@ -8,7 +8,7 @@ int	binary_search(int *ordered_array, int search_value, int len)
 	int	value_at_midpoint;
 
 	lower_bound = 0;
-	upper_bound = len;
+	upper_bound = len - 1;
 
 	while (lower_bound <= upper_bound)
 	{
